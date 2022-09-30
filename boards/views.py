@@ -106,5 +106,3 @@ class PostUpdateView(UpdateView):
         post.updated_at = timezone.now()
         post.save()
         return redirect('topic_posts', board_pk=post.topic.board.pk, topic_pk=post.topic.pk)
-
-
